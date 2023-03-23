@@ -1,0 +1,53 @@
+:root{
+    --casa_size: 150px;
+    --casa_margin: calc(var(--casa_size)*0.05);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h1{
+    margin: 20px;
+}
+
+.tabuleiro{
+    width: calc(var(--casa_size)*3 + (8* var(--casa_margin)));
+    height: calc(var(--casa_size)*3 + (8* var(--casa_margin)));
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.linha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.casa{
+    background-color: blanchedalmond;
+    height: var(--casa_size);
+    width: var(--casa_size);
+    margin: var(--casa_margin);
+}
+
+.x::after{
+    content: "\1F3C0";
+    font-size: 56px;
+    line-height: var(--casa_size);
+}
+
+.o::after{
+    content: "\26BD";
+    font-size: 56px;
+    line-height: var(--casa_size);
+}
